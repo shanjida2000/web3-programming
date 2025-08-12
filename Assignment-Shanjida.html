@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning Html is Fun">
+    <meta name="keywords">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Html Layout -Shanjida_files/style.css">
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: #c0392b;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+nav{
+    background:#e67e22 ;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+nav ul{
+list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav a{
+    color: aquamarine;
+    text-decoration: none;
+    font-size: 18px;
+}
+section{
+  display: flex; 
+  justify-content: space-between; 
+}
+div{
+    background:#8e44ad ;
+    flex-basis: 60%;
+    padding: 25px 30px;
+}
+aside{
+    padding: 25px 30px;
+    background:#f1c40f ;
+    flex-basis: 38%;
+}
+aside ul{
+    margin-left: 18px; 
+    margin-top: 10px;
+}
+footer{
+    margin-top: 10px;
+    background: #7f8c8d;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+#hero{
+  background: #686de0;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;  
+    height: 300px; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#hero h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+#hero a{
+   background: #262626;
+   color:#fff ;
+   display: inline-block;
+   padding:10px 25px ; 
+   margin-top: 15px;
+}
+    </style>
+</head>
+<body>
+  <header> 
+    <h1>HR Fashion Ghor</h1>
+  </header>
+  <nav>
+    <ul>
+        <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html">About</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html">Service</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html">Contact</a></li>
+    </ul>
+  </nav>
+  <section id="hero">
+   <h1>Welcome to my Site</h1>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, quam.</p> 
+   <a href="http://127.0.0.1:5500/index.html">Learn More</a>
+  </section>
+  <section>
+    <div>
+        <h2>This is Title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, officiis. Ex corporis incidunt maiores odit quas. Facilis inventore veniam quaerat.</p>
+    </div>
+    <aside>
+        <h2>Latest Post</h2>
+        <ul>
+        <li><a href="http://127.0.0.1:5500/index.html">Latest Post</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html">Latest Post</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html">Latest Post</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html">Latest Post</a></li>
+    </ul>
+    </aside>
+  </section>
+  <footer>
+    <p>All rights reserved</p>
+  </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
