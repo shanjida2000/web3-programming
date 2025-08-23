@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="styles.css" />
+     <style>
+        *{
+            font-family: montserrat;
+        }
+        body{
+            background: f1fbff;
+        }
+        .section-padding{
+            padding: 100px 0;
+        }
+        .carousel-item{
+            height: 100vh;
+            min-height: 300px;
+        }
+        .carousel-caption{
+            bottom: 220px;
+            z-index: 2;
+        }
+         .carousel-caption h1{
+           font-size: 60px;
+           letter-spacing: 2px;
+          margin-top: 25px;
+        }
+        .carousel-caption h4{
+         width: 60%;
+         margin: auto;
+         font-size: 30px;
+        }
+        carousel-inner::before{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 7);
+            z-index: 1;    
+        }
+        .navbar-nav a{
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .navbar-light .navbar-brand{
+            color: #000;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .navbar-light .navbar-brand:focus,
+        .navbar-light .navbar-brand:hover{
+           color: #000; 
+        }
+        .navbar-light .navbar-nav .navbar-link{
+           color: #000; 
+        }
+        .w-100{
+            height:100vh;
+        }
+      @media only screen and(min-width:768px) and (max-width:991px){
+        .carousel-caption{
+            bottom: 370px;
+        }
+        .carousel-caption h4{
+        width: 100%;
+        }
+      }
+
+      @media only screen and (max-width:767px){
+        .navbar-brand{
+            text-align: center;
+        }
+        .carousel-caption{
+            bottom: 125px;
+
+        }
+        .carousel-caption h1{
+            padding: 10px 15px;
+           font-size: 17px;   
+        }
+        .carousel-caption a{
+            padding: 10px 15px;
+           
+        }
+        .carousel-caption h4{
+            width: 100%;
+            line-height: 1.6;
+            font-size: 12px;
+
+        }
+      } 
+    .service-icon {
+      font-size: 40px;
+      color: rgb(27, 63, 71);
+      margin-bottom: 15px;
+    }
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .service-box {
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      transition: 0.3s;
+      text-align: center;
+    }
+    .service-box:hover {
+      background: #f8f9fa;
+      transform: translateY(-5px);
+    }
+   .video-section {
+      background: url('https://images.unsplash.com/photo-1522204506807-5b2026e4b1f1') center center/cover no-repeat;
+      position: relative;
+      padding: 100px 0;
+      text-align: center;
+      color: white;
+    }
+    .video-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:rgb(27, 63, 71); /* blue overlay */
+    }
+    .video-section .content {
+      position: relative;
+      z-index: 1;
+    }
+    .play-btn {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      background: white;
+      color: rgb(27, 63, 71);
+      border-radius: 50%;
+      font-size: 30px;
+      line-height: 70px;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .play-btn:hover {
+      background: #f1f1f1;
+      transform: scale(1.1);
+    }
+    .content h3 {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .container {
+  padding: 50px 0; /* Add some vertical padding */
+}
+
+.col-md-3 {
+  margin-bottom: 30px; /* Space between columns on smaller screens */
+}
+
+.col-md-3 i {
+  font-size: 3rem; /* Adjust icon size */
+  color: rgb(27, 63, 71); /* Bootstrap primary blue color */
+  margin-bottom: 10px;
+}
+
+.col-md-3 h3 {
+  font-size: 2.5rem; /* Adjust number size */
+  font-weight: bold;
+  color: #333;
+}
+
+.col-md-3 p {
+  font-size: 1.1rem;
+  color: #555;
+}
+ .section {
+      padding: 4rem 0;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .section-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+    .section-list li::before {
+      content: "• ";
+      color: #6c757d;
+    }
+    .btn-custom {
+      background-color:#170f77);
+      border: none;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #5a4eea;
+    }
+    .team-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .team-member h5 {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .team-member p {
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+    .social-links a {
+      color: #007bff;
+      margin: 0 5px;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: #0056b3;
+    }
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 ratio */
+  height: 0;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ .testimonial-section {
+            position: relative;
+            background: url('your-image.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            background-color: rgb(27, 63, 71);
+        }
+
+        .testimonial-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(27, 63, 71); /* Blue overlay */
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .testimonial-content h6 {
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .testimonial-content h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-content p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-top: 20px;
+            object-fit: cover;
+        }
+
+        .testimonial-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .testimonial-handle {
+            color: #ddd;
+        }
+        .location-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .location-section h2 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .location-line {
+            width: 50px;
+            height: 3px;
+            background-color: #1b3f47; /* You can change the color */
+            margin: 0 auto 30px;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+        }
+            footer {
+      background-color: #1b3f47;
+      color: #fff;
+      padding: 60px 0;
+    }
+
+    .footer-heading {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      display: block;
+      margin-bottom: 8px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin-right: 15px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #0d6efd;
+    }
+    .footer-bottom {
+  background-color: #ffffff;
+  border-top: 1px solid #1c1f26;
+  color: #1c1f26;
+  font-size: 20px;
+}
+     </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><span class="text-warning">Service</span>Amp</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#team">Team</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="image.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption">
+         <h4>Page Layout Design</h4>
+        <h1>Better Solution At<br>Your Fingertips</h1>
+      <div class="mt-4">
+        <a href="#" class="btn btn-warning btn-lg me-2">Contact Us</a>
+          <a href="#" class="btn btn-light btn-lg ">Learn More</a> 
+      </div>   
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">  
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>    
+  </div>
+</div>
+</section>
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center section-title">Smart Solutions For Your Business</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="bi bi-hand-thumbs-up-fill service-icon"></i>
+          <h5>Market Research</h5>
+          <p>Systematic gathering and interpretation of information about individuals or organizations. Page Layout Design is one of Mobirise's best themes.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="bi bi-people-fill service-icon"></i>
+          <h5>Strategic Consulting</h5>
+          <p>A strategy consultant is primarily geared towards providing unbiased strategic advice to a company's board. Page Service Layout Design would perfectly suit all your needs.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <i class="bi bi-arrow-up-circle-fill service-icon"></i>
+          <h5>Sales Services</h5>
+          <p>Sales Management Services helps clients improve their sales organization’s effectiveness. Which part of Page Layout Design do you like the most?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="video-section">
+  <div class="content">
+    <a href="#" class="play-btn"><i class="bi bi-play-fill"></i></a>
+    <h3>WE ALWAYS STAY WITH OUR CLIENTS AND RESPECT THEIR <br>BUSINESS</h3>
+  </div>
+</section>
+<section>
+  <div class="container">
+  <div class="row text-center">
+    <div class="col-md-3">
+      <i class="bi bi-clock"></i>
+      <h3>20</h3>
+      <p>Years Of Experience</p>
+    </div>
+    <div class="col-md-3">
+      <i class="bi bi-folder-fill"></i>
+      <h3>&gt;5000</h3>
+      <p>Successful Projects</p>
+    </div>
+    <div class="col-md-3">
+      <i class="bi bi-hand-thumbs-up-fill"></i>
+      <h3>&gt;500</h3>
+      <p>Team Members</p>
+    </div>
+    <div class="col-md-3">
+      <i class="bi bi-person-fill"></i>
+      <h3>10000</h3>
+      <p>Happy Clients</p>
+    </div>
+  </div>
+</div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Image Column -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="work.jpg" alt="Business illustration"
+             class="img-fluid rounded">
+      </div>
+      <!-- Text Column -->
+      <div class="col-md-6">
+        <h2 class="section-title">Get Connected and Take Control of Your Business Success</h2>
+        <ul class="section-list">
+          <li>Number of Buyers</li>
+          <li>Achieve all New Sales</li>
+          <li>Improve your Business</li>
+          <li>Business Growth</li>
+        </ul>
+         <a href="#" class="btn btn-warning btn-lg me-2">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="mb-4">Executive Team</h2>
+    <p class="text-primary mb-5">How we work</p>
+    <div class="row justify-content-center">
+      
+      <!-- Adrian Carey -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="team-member">
+          <img src="adrian.jpg" alt="Adrian Carey" class="img-fluid rounded-circle team-img">
+          <h5>Adrian Carey</h5>
+          <p>Designer / Web Developer</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Susan Crossman -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="team-member">
+          <img src="susan.jpg" alt="Susan Crossman" class="img-fluid rounded-circle team-img">
+          <h5>Susan Crossman</h5>
+          <p>Sales / Marketing Manager</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stephen Jenkin -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="team-member">
+          <img src="stephen.jpg" alt="Stephen Jenkin" class="img-fluid rounded-circle team-img">
+          <h5>Stephen Jenkin</h5>
+          <p>CO-Founder / Designer</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jennifer Bawerman -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="team-member">
+          <img src="jennifer.jpeg" alt="Jennifer Bawerman" class="img-fluid rounded-circle team-img">
+          <h5>Jennifer Bawerman</h5>
+          <p>Designer / Project Manager</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 text-white" style="background-color: rgb(27, 63, 71);">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Left Column: Progress Bars -->
+      <div class="col-lg-6 mb-4">
+        <h2 class="mb-4">Our Growth Rate Of Last 10 Years</h2>
+
+        <!-- Progress Item -->
+        <div class="mb-3">
+          <div class="d-flex justify-content-between mb-1">
+            <span>70%</span>
+            <span>Profit Per Year</span>
+          </div>
+          <div class="progress" style="height: 12px;">
+            <div class="progress-bar bg-light" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <!-- Similar blocks for 80% and 50% -->
+        <div class="mb-3">
+          <div class="d-flex justify-content-between mb-1">
+            <span>80%</span>
+            <span>Investment Per Year</span>
+          </div>
+          <div class="progress" style="height: 12px;">
+            <div class="progress-bar bg-light" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="d-flex justify-content-between mb-1">
+            <span>50%</span>
+            <span>Return on Investment</span>
+          </div>
+          <div class="progress" style="height: 12px;">
+            <div class="progress-bar bg-light" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Icon + Text Feature Boxes -->
+      <div class="col-lg-6">
+        <div class="row g-4">
+          <!-- Feature Box -->
+          <div class="col-md-6 d-flex">
+            <div class="me-3">
+              <i class="fas fa-users fa-2x"></i>
+            </div>
+            <div>
+              <h5>Number of Buyers</h5>
+              <hr class="border-light my-1">
+              <p>The variety of customers is among five need determinants that move the demand curve…</p>
+            </div>
+          </div>
+
+          <!-- Repeat for other feature boxes -->
+          <div class="col-md-6 d-flex">
+            <div class="me-3">
+              <i class="fas fa-chart-line fa-2x"></i>
+            </div>
+            <div>
+              <h5>Achieve all New Sales</h5>
+              <hr class="border-light my-1">
+              <p>Action your sales activities. Choose 3 metrics and monitor them carefully all year…</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex">
+            <div class="me-3">
+              <i class="fas fa-briefcase fa-2x"></i>
+            </div>
+            <div>
+              <h5>Improve your Business</h5>
+              <hr class="border-light my-1">
+              <p>Prospect continually. Schedule time every week and do not permit anything to keep you from it.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex">
+            <div class="me-3">
+              <i class="fas fa-chart-growth fa-2x"></i>
+            </div>
+            <div>
+              <h5>Business Growth</h5>
+              <hr class="border-light my-1">
+              <p>Categorizing development patterns of small businesses in a systematic way…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="unique-experience py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Column: Text -->
+      <div class="col-md-6">
+        <h2>We Create Unique Experiences</h2>
+        <p>
+          We deliver 100% and provide instant response to help them
+          succeed in a constantly changing and challenging
+          business world.
+        </p>
+        <a href="#" class="btn btn-outline-primary">Learn More</a>
+      </div>
+      <!-- Right Column: Video -->
+      <div class="col-md-6">
+        <div class="video-wrapper position-relative overflow-hidden">
+          <video src="your-video.mp4" class="w-100" controls></video>
+          <!-- Or you can use an image with a play button overlay -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testimonial-section">
+    <div class="testimonial-overlay"></div>
+    <div class="container testimonial-content">
+        <h6>Clients Testimonials</h6>
+        <h2>What Our Clients Say About Us</h2>
+        <p>
+            They is the most valuable business resource we have ever purchased. 
+            Your company is truly upstanding and is behind its product 100%. 
+            It's really wonderful.
+        </p>
+        <img src="client.jpg" alt="Client" class="testimonial-img">
+        <div class="testimonial-name">Anthony Jackson</div>
+        <div class="testimonial-handle">@anthony_jackson</div>
+    </div>
+</section>
+<section class="location-section">
+    <div class="container">
+        <h2>Our Location</h2>
+        <div class="location-line"></div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Google Map Embed -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.998641408182!2d-73.9862322845921!3d40.7488172793277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af18440b91%3A0xa0b0b6efcde5bf3d!2s350%205th%20Ave%2C%20New%20York%2C%20NY%2010118%2C%20USA!5e0!3m2!1sen!2sus!4v1692138349304!5m2!1sen!2sus" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <!-- About Us -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-heading">About Us</h5>
+        <p>We’re on a mission to build a better future where technology creates good jobs for everyone.</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+      </div>
+
+      <!-- Important Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-heading">Important Links</h5>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Service</a>
+          <a href="#">Case Studies</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-heading">Contact Us</h5>
+        <p><strong>Office Address</strong><br>
+        10500 Northwest Freeway,<br>
+        Suite 206<br>
+        Houston, Texas 77092</p>
+        <p><strong>Phone:</strong> (888)123-4587<br>
+        <strong>Email:</strong> info@admin.com</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom text-center py-3">
+  <div class="container">
+    <p class="mb-0">© Copyright 2019 - Page Layout Design - All Rights Reserved</p>
+  </div>
+</div>
+
+
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+     <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
